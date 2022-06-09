@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Inicio from "../components/pages/Inicio";
 import "./App.css";
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="a">hola</h1>
+      <h1 className="uppercase text-3xl font-bold">Presupuestos Travertino</h1>
+      <Inicio />
     </div>
   );
 }
