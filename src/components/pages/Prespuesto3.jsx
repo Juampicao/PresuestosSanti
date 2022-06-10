@@ -1,7 +1,20 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import BotonAgregar from "../atoms/button/BotonAgregar";
+import Header from "../moleculas/Header";
+import { PresupuestoCosto } from "../moleculas/PresupuestoCosto";
 
 const Presupuesto3 = () => {
+  // Pruebas
+  const [ejemploTarjetas, setEjemploTarjetas] = useState([`hola`, "chau"]);
+
+  function agregarEjemplotarjeta() {
+    ejemploTarjetas.push(..."adios", ..."amigos");
+  }
+  agregarEjemplotarjeta();
+
+  // Fin Pruebas
+
   const [empresa, setEmpresa] = useState(``);
   const [direccion, setDireccion] = useState(``);
   const [dias, setDias] = useState("Lunes");
@@ -95,6 +108,13 @@ const Presupuesto3 = () => {
 
   return (
     <div className="">
+      <Header title="Presupuesto3" />
+      {/* Pruebas  */}
+      <PresupuestoCosto materiales="Travertino" />
+      <BotonAgregar />
+      {ejemploTarjetas.map((e) => e)}
+
+      {/* Pruebas */}
       <h1 className="text-4xl font-sans font-bold text-gray-800 text-center my-4">
         {" "}
         Crear Presupuesto

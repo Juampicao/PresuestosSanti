@@ -12,9 +12,11 @@ import Presupuesto3 from "./components/pages/Prespuesto3";
 import { PresupuestoCosto } from "./components/moleculas/PresupuestoCosto";
 import PresupuestoVenta from "./components/moleculas/PresupuestoVenta";
 import Configuraciones from "./components/pages/Configuraciones";
+import FormularioProveedores from "./components/pages/FormularioProveedores";
 
 function App() {
   const [cargando, setCargando] = useState(true);
+  const [proveedor, setProveedor] = useState();
 
   return (
     <div className="App">
@@ -32,6 +34,16 @@ function App() {
             <Route path="presupuesto3" element={<Presupuesto3 />} />
             <Route path="presupuestocosto" element={<PresupuestoCosto />} />
             <Route path="presupuestoventa" element={<PresupuestoVenta />} />
+            <Route
+              path="formularioproveedores"
+              element={
+                <FormularioProveedores
+                  proveedor={proveedor}
+                  setProveedor={setProveedor}
+                />
+              }
+            />
+
             <Route path="configuraciones" element={<Configuraciones />} />
           </Route>
         </Routes>

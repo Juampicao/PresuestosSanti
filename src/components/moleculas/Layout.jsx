@@ -1,6 +1,8 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import ImagenConfiguracion from "../atoms/ImagenConfiguracion";
 
+import ImagenTravertino from "../../img/icono-travertinoBlanco.png";
+
 const Layout = () => {
   const location = useLocation();
   const urlActual = location.pathname;
@@ -9,9 +11,12 @@ const Layout = () => {
     <div className="sm:flex  ">
       <div className="sm:w-1/4 min-w-[250px] bg-blue-900 px-5 py-10">
         <Link to="/presupuesto">
-          <h2 className="text-2xl uppercase font-black text-center text-white">
-            Presupuestos Travertino
-          </h2>
+          <div className="flex flex-col items-center">
+            <h2 className="text-2xl uppercase font-black text-center text-white">
+              Presupuestos Travertino
+            </h2>
+            <img src={ImagenTravertino} alt="" className="h-10 mt-1" />
+          </div>
         </Link>
 
         <nav className="mt-10">
@@ -63,6 +68,14 @@ const Layout = () => {
             to="/presupuestoventa"
           >
             Presupuesto Venta
+          </Link>
+          <Link
+            className={`${
+              urlActual === "/clientes/nuevo" ? "text-blue-300" : "text-white"
+            } text-2xl block mt-4 hover:text-blue-300`}
+            to="/formularioProveedores"
+          >
+            Formulario Proveedores
           </Link>
 
           <Link

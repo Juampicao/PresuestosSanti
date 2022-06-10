@@ -1,0 +1,14 @@
+{
+  "proveedores": [
+    {
+      "id": 1,
+      "empresa": "Marmol SA",
+      "domicilio": "Cabildo 2021"
+    },
+    {
+      "id": 2,
+      "empresa": "Travertino SA",
+      "domicilio": "Flores 1442"
+    }
+  ]
+}
