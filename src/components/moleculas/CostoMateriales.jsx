@@ -1,6 +1,7 @@
 import React from "react";
+import Header from "./Header";
 
-export const PresupuestoCosto = ({ materiales }) => {
+export const CostoMateriales = ({ materiales }) => {
   // Styles
 
   const inputDiv = "space-y-1 flex flex-col  ";
@@ -11,6 +12,7 @@ export const PresupuestoCosto = ({ materiales }) => {
 
   return (
     <div>
+      <Header title="Materiales" />
       <div className="flex flex-col  m-2 p-4 shadow-xl ">
         <h3 className="text-2xl font-bold my-2"> {materiales} </h3>
         {/* Inicio Formulario Materiales */}
@@ -90,3 +92,5 @@ export const PresupuestoCosto = ({ materiales }) => {
     </div>
   );
 };
+
+export default CostoMateriales;

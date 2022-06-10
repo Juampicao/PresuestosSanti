@@ -1,17 +1,18 @@
-import React, { useState } from "react";
 import Proveedor from "../moleculas/Proveedor";
 
-const FormularioProveedores = ({ proveedor, setProveedor }) => {
+import React, { useState } from "react";
+
+const FormularioProveedores = () => {
+  // Object Destructuring
+  // Funcion Agregar
   const handleAgregarProveedor = () => {
-    console.log("agregnaod");
-    setProveedor("hola");
+    console.log("Agregando");
+    setProveedor("");
   };
-  console.log(proveedor);
 
   // Styles
   const botonCrearPresupuesto =
     "duration-200 bg-black hover:bg-white hover:text-black hover:border hover:border-black text-white px-2 py-3 w-full mx-auto uppercase text-sm  font-bold uppercase cursor-pointer";
-
   const inputDiv = "space-y-1 flex flex-col  ";
   const inputText = "pl-2 py-1  w-full capitalize border border-slate-300 ";
   const inputSelect =

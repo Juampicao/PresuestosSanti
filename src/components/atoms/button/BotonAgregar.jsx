@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import agregarProducto from "../../../img/iconoAgregar.png";
-import { PresupuestoCosto } from "../../moleculas/PresupuestoCosto";
+import { CostoMateriales } from "../../moleculas/CostoMateriales";
 
 const BotonAgregar = (handleAgregarProductos) => {
   const handleAgregarProducto = () => {

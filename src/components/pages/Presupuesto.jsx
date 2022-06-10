@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import Observaciones from "../moleculas/Observaciones";
-import { PresupuestoCosto } from "../moleculas/PresupuestoCosto";
-import PresupuestoVenta from "../moleculas/PresupuestoVenta";
+import { CostoMateriales } from "../moleculas/CostoMateriales";
+import CotizacionesVenta from "../moleculas/CotizacionesVenta";
 import Variables from "../moleculas/Variables";
 import Header from "../moleculas/Header";
 
@@ -10,9 +10,7 @@ import Header from "../moleculas/Header";
 import agregarProducto from "../../img/iconoAgregar.png";
 
 const Presupuesto = ({ materiales }) => {
-  const [listadoMateriales, setListadoMateriales] = useState([
-    PresupuestoCosto,
-  ]);
+  const [listadoMateriales, setListadoMateriales] = useState([CostoMateriales]);
   const [activeMostrarMateriales, setActiveMostrarMateriales] = useState(true);
 
   const handleAgregarProducto = () => {
@@ -36,11 +34,11 @@ const Presupuesto = ({ materiales }) => {
       {/* <PresupuestoCosto materiales="Materiales" /> */}
       {activeMostrarMateriales &&
         listadoMateriales.map((e) => (
-          <PresupuestoCosto materiales="Materiales" />
+          <CostoMateriales materiales="Materiales" />
         ))}
       {/* Boton agregar Producto  */}
       <div className="flex items-center my-4 ">
-        <p className="font-black">Agregar Producto </p>
+        <p className="font-black ">Agregar Producto </p>
         <input
           type="image"
           src={agregarProducto}
@@ -50,7 +48,7 @@ const Presupuesto = ({ materiales }) => {
       </div>
       {/* Fin Boton agregar Producto  */}
 
-      <PresupuestoVenta />
+      <CotizacionesVenta />
       <Observaciones />
       <div>
         <button

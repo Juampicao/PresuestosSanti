@@ -37,7 +37,7 @@ const Layout = () => {
           >
             Presupuestos
           </Link>
-          <Link
+          {/* <Link
             className={`${
               urlActual === "/clientes/nuevo" ? "text-blue-300" : "text-white"
             } text-2xl block mt-2 hover:text-blue-300`}
@@ -52,22 +52,22 @@ const Layout = () => {
             to="/presupuesto3"
           >
             Presupuestos3
+          </Link> */}
+          <Link
+            className={`${
+              urlActual === "/clientes/nuevo" ? "text-blue-300" : "text-white"
+            } text-2xl block mt-4 hover:text-blue-300`}
+            to="/costoMateriales"
+          >
+            Costo Materiales
           </Link>
           <Link
             className={`${
               urlActual === "/clientes/nuevo" ? "text-blue-300" : "text-white"
             } text-2xl block mt-4 hover:text-blue-300`}
-            to="/presupuestocosto"
+            to="/cotizacionesVenta"
           >
-            Presupuestos Costo
-          </Link>
-          <Link
-            className={`${
-              urlActual === "/clientes/nuevo" ? "text-blue-300" : "text-white"
-            } text-2xl block mt-4 hover:text-blue-300`}
-            to="/presupuestoventa"
-          >
-            Presupuesto Venta
+            Cotizaciones Venta
           </Link>
           <Link
             className={`${
@@ -86,7 +86,7 @@ const Layout = () => {
           >
             Configuraciones
           </Link>
-          <div className="sticky botom-0 ">
+          <div className=" ">
             <Link to="/configuraciones">
               <ImagenConfiguracion />
             </Link>
@@ -94,7 +94,7 @@ const Layout = () => {
         </nav>
       </div>
 
-      <div className="sm:w-3/4 p-10 sm:h-screen sm:overflow-y-scroll">
+      <div className="p-3 xs:p-5 sm:w-3/4 sm:p-10 sm:h-screen sm:overflow-y-scroll">
         <Outlet />
       </div>
     </div>

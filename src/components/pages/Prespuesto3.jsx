@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import BotonAgregar from "../atoms/button/BotonAgregar";
 import Header from "../moleculas/Header";
-import { PresupuestoCosto } from "../moleculas/PresupuestoCosto";
+import { CostoMateriales } from "../moleculas/CostoMateriales";
 
 const Presupuesto3 = () => {
   // Pruebas
