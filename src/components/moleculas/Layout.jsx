@@ -19,11 +19,13 @@ const Layout = () => {
           </div>
         </Link>
 
-        <nav className="mt-10">
+        <nav className=" mt-5 sm:mt-10">
           <Link
             className={`${
-              urlActual === "/clientes" ? "text-blue-300" : "text-white"
-            } text-2xl block mt-2 hover:text-blue-300`}
+              urlActual === "/listado"
+                ? "bg-indigo-500 rounded-lg ml-2 text-white pl-3 duration-200 p-2"
+                : "text-white duration-200 hover:bg-indigo-500 hover:rounded-lg hover:pl-2"
+            } text-2xl block mt-2 sm:mt-4 `}
             to="/listado"
           >
             Listado
@@ -31,16 +33,20 @@ const Layout = () => {
 
           <Link
             className={`${
-              urlActual === "/clientes/nuevo" ? "text-blue-300" : "text-white"
-            } text-2xl block mt-2 hover:text-blue-300`}
+              urlActual === "/presupuesto"
+                ? "bg-indigo-500 rounded-lg ml-2 text-white pl-3 duration-200 p-2"
+                : "text-white duration-200 hover:bg-indigo-500 hover:rounded-lg hover:pl-2"
+            } text-2xl block mt-2 sm:mt-4 `}
             to="/presupuesto"
           >
             Presupuestos
           </Link>
           {/* <Link
             className={`${
-              urlActual === "/clientes/nuevo" ? "text-blue-300" : "text-white"
-            } text-2xl block mt-2 hover:text-blue-300`}
+              urlActual === "/presupuesto2"
+                ? "bg-indigo-500 rounded-lg ml-2 text-white pl-3 duration-200 p-2"
+                : "text-white duration-200 hover:bg-indigo-500 hover:rounded-lg hover:pl-2"
+            } text-2xl block mt-2 `}
             to="/presupuesto2"
           >
             Presupuestos2
@@ -55,24 +61,30 @@ const Layout = () => {
           </Link> */}
           <Link
             className={`${
-              urlActual === "/clientes/nuevo" ? "text-blue-300" : "text-white"
-            } text-2xl block mt-4 hover:text-blue-300`}
+              urlActual === "/costoMateriales"
+                ? "bg-indigo-500 rounded-lg ml-2 text-white pl-3 duration-200 p-2"
+                : "text-white duration-200 hover:bg-indigo-500 hover:rounded-lg hover:pl-2"
+            } text-2xl block mt-2 sm:mt-4`}
             to="/costoMateriales"
           >
             Costo Materiales
           </Link>
           <Link
             className={`${
-              urlActual === "/clientes/nuevo" ? "text-blue-300" : "text-white"
-            } text-2xl block mt-4 hover:text-blue-300`}
+              urlActual === "/cotizacionesVenta"
+                ? "bg-indigo-500 rounded-lg ml-2 text-white pl-3 duration-200 p-2"
+                : "text-white duration-200 hover:bg-indigo-500 hover:rounded-lg hover:pl-2"
+            } text-2xl block mt-2 sm:mt-4`}
             to="/cotizacionesVenta"
           >
             Cotizaciones Venta
           </Link>
           <Link
             className={`${
-              urlActual === "/clientes/nuevo" ? "text-blue-300" : "text-white"
-            } text-2xl block mt-4 hover:text-blue-300`}
+              urlActual === "/formularioProveedores"
+                ? "bg-indigo-500 rounded-lg ml-2 text-white pl-3 duration-200 p-2"
+                : "text-white duration-200 hover:bg-indigo-500 hover:rounded-lg hover:pl-2"
+            } text-2xl block mt-2 sm:mt-4`}
             to="/formularioProveedores"
           >
             Formulario Proveedores
@@ -80,8 +92,10 @@ const Layout = () => {
 
           <Link
             className={`${
-              urlActual === "/clientes/nuevo" ? "text-blue-300" : "text-white"
-            } text-2xl block mt-4 hover:text-blue-300`}
+              urlActual === "/configuraciones"
+                ? "bg-indigo-500 rounded-lg ml-2 text-white pl-3 duration-200 p-2"
+                : "text-white duration-200 hover:bg-indigo-500 hover:rounded-lg hover:pl-2"
+            } text-2xl block mt-2 sm:mt-4 `}
             to="/configuraciones"
           >
             Configuraciones
